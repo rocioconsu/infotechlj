@@ -30,3 +30,16 @@ a {
   color: #EDD1A0; 
 }
 
+.answers {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 2px solid #ccc;
+}
+
+code {
+  background-color: #EDD1A0;
+  color: black;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
+

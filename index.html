@@ -55,17 +55,38 @@
   </ul>
 
   <p><strong>Buy more.</strong><br>
-  <strong>Feel less.</strong><br>
-  <strong>Repeat.</strong></p>
+    <strong>Feel less.</strong><br>
+    <strong>Repeat.</strong>
+  </p>
 
   <p>
-    While we create stories that sell, there are also initiatives striving for a better digital world. 
-    Meet the 
+    While we create stories that sell, there are also initiatives striving for a better digital world.
+    Meet the
     <a href="https://www.humanetech.com" target="_blank" rel="noopener noreferrer">
       Center for Humane Technology
-    </a>, 
+    </a>,
     where former tech leaders warn about the dangers of digital manipulation.
   </p>
+
+  <section class="answers">
+    <h3>Answers</h3>
+
+    <p><strong>1 Which color will be used to display the paragraph text?</strong><br>
+    <em>Answer:</em> <strong>Orange</strong>.</p>
+
+    <p><strong>2 Explain why – briefly describe which rule takes precedence and why.</strong><br>
+    The rule <code>.izjava { color: orange !important; }</code> takes precedence because it includes
+    the <code>!important</code> declaration. Even though the ID selector
+    <code>#obvestilo</code> is normally more specific, any <code>!important</code> rule overrides
+    non-important ones.</p>
+
+    <p><strong>3 What color would the text be if the element did not have the class <code>izjava</code>?</strong><br>
+    <em>Answer:</em> <strong>Blue</strong>. Without the class <code>izjava</code>, the
+    <code>!important</code> rule is removed. Among the remaining selectors, the ID selector
+    <code>#obvestilo</code> has the highest specificity, so the color from that rule (<code>blue</code>)
+    would apply.</p>
+  </section>
+
 </body>
 
 </html>
