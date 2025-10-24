@@ -1,4 +1,32 @@
+/* 
+Colors:
+
+viola100: #f4f2fb,rgb(244, 242, 251)
+viola200: #DBD3F2,rgb(219, 211, 242)
+viola300: #8357AB,rgb(131, 87, 171)
+viola400: #6A488B,rgb(106, 72, 139)
+viola500: #4A365F,rgb(74, 54, 95)
+viola600: #342541,rgb(52, 37, 65)
+
+beige100: #FCF8F0,rgb(252, 248, 240)
+beige200: #F9EFDB,rgb(249, 239, 219)
+beige300: #EDD1A0,rgb(237, 209, 160)
+beige400: #E8C489,rgb(232, 196, 137)
+
+white: #FFFFFF,rgb(255, 255, 255)
+black: #000000,rgb(0, 0, 0)
+*/
+
 body {
-  background-color: black;
-  color: white;
+  background-color: #342541;
+  color: #f4f2fb;
 }
+
+a {
+  color: #E8C489;
+}
+
+.tagline {
+  color: #EDD1A0; 
+}
+
