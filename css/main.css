@@ -17,29 +17,46 @@ white: #FFFFFF,rgb(255, 255, 255)
 black: #000000,rgb(0, 0, 0)
 */
 
+:root {
+  --viola100: #f4f2fb;
+  --viola200: #DBD3F2;
+  --viola300: #8357AB;
+  --viola400: #6A488B;
+  --viola500: #4A365F;
+  --viola600: #342541;
+
+  --beige100: #FCF8F0;
+  --beige200: #F9EFDB;
+  --beige300: #EDD1A0;
+  --beige400: #E8C489;
+
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+
 body {
-  background-color: #342541;
-  color: #f4f2fb;
+  background-color: var(--viola600);
+  color: var(--viola100);
 }
 
 a {
-  color: #E8C489;
+  color: var(--beige400);
 }
 
 .tagline {
-  color: #EDD1A0; 
+  color: var(--beige300);
 }
 
 .answers {
   margin-top: 2rem;
   padding: 1rem;
-  border-top: 2px solid #ccc;
+  border-top: 2px solid var(--beige100);
 }
 
 code {
-  background-color: #EDD1A0;
-  color: black;
+  background-color: var(--beige300);
+  color: var(--black);
   padding: 0.1rem 0.3rem;
   border-radius: 4px;
 }
-
