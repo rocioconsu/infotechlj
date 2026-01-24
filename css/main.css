@@ -592,6 +592,15 @@ a:hover {
     flex-direction: row;
   }
 
+  body {
+    transition: transform 0.4s ease-in-out;
+    overflow-x: hidden;
+  }
+
+  body.menu-open {
+    transform: translateX(-70vw); 
+  }
+
   .hamburger {
     order: 1;
     display: inline-block;
@@ -607,15 +616,16 @@ a:hover {
   }
 
   nav {
-    height: 0;
-    flex-basis: 100%;
-    width: 100%;
-    margin-top: 1rem;
-    order: 3;
-    overflow: hidden;
-    transition: height 0.5s ease-in-out;
-    transition-behavior: allow-discrete;
-    interpolate-size: allow-keywords;
+    position: fixed; /* Se queda fijo en la pantalla */
+    top: 0;
+    right: 0;
+    width: 70vw; /* 70% del ancho de la ventana */
+    height: 100vh; /* Llena toda la altura */
+    background-color: var(--beige200);
+    z-index: 1000;
+    transform: translateX(70vw);
+    display: block !important; 
+    overflow-y: auto;
   }
 
   nav.is-active {
@@ -624,10 +634,7 @@ a:hover {
 
   .nav-list {
     flex-direction: column;
-    background-color: var(--beige200);
-    border-radius: 8px;
-    padding: 1rem 0;
-    gap: 0;
+    padding-top: 5rem; /* Espacio para que no choque con el botón */
   }
 
   .nav-list li {
