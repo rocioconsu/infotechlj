@@ -230,6 +230,8 @@ code {
   gap: 1rem;
   justify-content: center;
   list-style: none;
+  margin: 0 auto;
+  padding: 0;
 }
 
 #features-section li {
@@ -240,7 +242,7 @@ code {
   text-align: center;
   font-size: var(--fs-lg);
   border-radius: 8px;
-  flex: 1 1 200px;
+  flex: 0 0 100%;
   max-width: 350px;
 
   padding: 1.2rem;
@@ -442,5 +444,18 @@ a:hover {
 @media (min-width: 1920px) {
   html {
     font-size: 21px;
+  }
+}
+
+@media (min-width: 480px) {
+  #features-section li {
+    flex-basis: calc((100% - 1rem) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  #features-section li {
+    flex-basis: calc((100% - 2rem) / 3);
+    aspect-ratio: 1 / 1;
   }
 }
