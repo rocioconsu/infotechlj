@@ -354,11 +354,33 @@ a:hover {
   font-size: var(--fs-lg);
 }
 
-.logo img {
+.logo svg {
   height: 5rem;
   width: auto;
+  transition: transform 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97);
 }
 
+#angry {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#happy {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.logo:hover svg {
+  transform: rotate(15deg); 
+}
+
+.logo:hover #happy {
+  opacity: 0;
+}
+
+.logo:hover #angry {
+  opacity: 1;
+}
 .logo span {
   line-height: 1.1;
 }
