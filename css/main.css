@@ -459,3 +459,33 @@ a:hover {
     aspect-ratio: 1 / 1;
   }
 }
+
+@media (min-width: 595px) {
+  #hero-section {
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 769px) {
+  #hero-section h1 {
+    font-size: 5rem;
+  }
+
+  .site-header {
+    padding-bottom: 10vh;
+  }
+}
+
+@media (min-width: 1025px) {
+  #hero-section {
+    background-image: url('../img/hero-image.png');
+  }
+
+  #hero-section h1 {
+    font-size: 5rem;
+  }
+
+  #hero-section p {
+    font-size: 3rem;
+  }
+}
