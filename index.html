@@ -15,15 +15,25 @@
     content="https://images.squarespace-cdn.com/content/v1/51763a50e4b083b631f0694e/297f7051-de79-4108-8571-b6e21ad104b8/Banner_OD.jpg">
   <meta property="og:description"
     content="A satirical ad agency run by Orwell’s Animal Farm characters. Where revolution meets marketing and truth is just another campaign tool.">
+
+  <!-- Preconexión para optimizar carga de fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts: Nunito Sans, Lobster, Caprasimo -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Lobster&family=Nunito+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="css/main.css">
 
-  <!-- Favicon -->
+  <!-- Favicons -->
   <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="192x192" href="icons/favicon-192x192.png">
-  <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
   <link rel="apple-touch-icon" sizes="57x57" href="icons/favicon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="icons/favicon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="icons/favicon-72x72.png">
@@ -42,51 +52,145 @@
 </head>
 
 <body>
-  <h1>Welcome to the world of persuasion</h1>
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="img/logo.png" alt="Animal Agency logo">
+        <span>
+          Animal<br>
+          Agency
+        </span>
+      </a>
 
-  <p class="tagline">We once led the revolution. Today, we lead trends.</p>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#"><b>About Us</b></a></li>
+          <li><a href="#"><b>Services</b></a></li>
+          <li><a href="#"><b>Contact</b></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <h2>Our Commitments</h2>
+  <main>
 
-  <ul>
-    <li>We sell feelings, not products.</li>
-    <li>We care about the environment (if it's part of the campaign).</li>
-    <li>We post to connect – and count likes to feel alive.</li>
-  </ul>
+    <section id="hero-section">
+      <div class="container">
+        <h1>Animal Adgency</h1>
+        <p class="tagline">creativity that bites</p>
 
-  <p><strong>Buy more.</strong><br>
-    <strong>Feel less.</strong><br>
-    <strong>Repeat.</strong>
-  </p>
+        <a href="#" class="btn">Meet the Team</a>
+        <a href="#" class="btn btn--secondary">Our Commitment</a>
+      </div>
+    </section>
 
-  <p>
-    While we create stories that sell, there are also initiatives striving for a better digital world.
-    Meet the
-    <a href="https://www.humanetech.com" target="_blank" rel="noopener noreferrer">
-      Center for Humane Technology
-    </a>,
-    where former tech leaders warn about the dangers of digital manipulation.
-  </p>
+    <section id="features-section">
+      <div class="container">
+        <h2>Welcome to the world of persuasion</h2>
 
-  <section class="answers">
-    <h3>Answers</h3>
+        <p class="subtitle"> We once led the <b>revolution</b>. Today, we lead trends.</p>
 
-    <p><strong>1 Which color will be used to display the paragraph text?</strong><br>
-    <em>Answer:</em> <strong>Orange</strong>.</p>
+        <h3>Our Commitments</h3>
 
-    <p><strong>2 Explain why – briefly describe which rule takes precedence and why.</strong><br>
-    The rule <code>.izjava { color: orange !important; }</code> takes precedence because it includes
-    the <code>!important</code> declaration. Even though the ID selector
-    <code>#obvestilo</code> is normally more specific, any <code>!important</code> rule overrides
-    non-important ones.</p>
+        <ul>
+          <li>
+            <img src="img/icon-feelings.png" alt="Emotions icon">
+            <p>We sell feelings, not products.</p>
+          </li>
 
-    <p><strong>3 What color would the text be if the element did not have the class <code>izjava</code>?</strong><br>
-    <em>Answer:</em> <strong>Blue</strong>. Without the class <code>izjava</code>, the
-    <code>!important</code> rule is removed. Among the remaining selectors, the ID selector
-    <code>#obvestilo</code> has the highest specificity, so the color from that rule (<code>blue</code>)
-    would apply.</p>
-  </section>
+          <li>
+            <img src="img/icon-environment.png" alt="Environment icon">
+            <p>We care about the environment (if it's part of the campaign).</p>
+          </li>
 
+          <li>
+            <img src="img/icon-social-media.png" alt="Social media icon">
+            <p>We post to connect – and count likes to feel alive.</p>
+          </li>
+        </ul>
+
+
+        <p><strong>Buy more.</strong><br>
+          <strong>Feel less.</strong><br>
+          <strong>Repeat.</strong>
+        </p>
+
+        <p>
+          While we create stories that sell, there are also initiatives striving for a better digital world.
+          Meet the
+          <a href="https://www.humanetech.com" target="_blank" rel="noopener noreferrer">
+            Center for Humane Technology
+          </a>,
+          where former tech leaders warn about the dangers of digital manipulation.
+        </p>
+
+        <section class="answers">
+          <h3>Answers</h3>
+
+          <p><strong>1 Which color will be used to display the paragraph text?</strong><br>
+            <em>Answer:</em> <strong>Orange</strong>.
+          </p>
+
+          <p><strong>2 Explain why – briefly describe which rule takes precedence and why.</strong><br>
+            The rule <code>.izjava { color: orange !important; }</code> takes precedence because it includes
+            the <code>!important</code> declaration. Even though the ID selector
+            <code>#obvestilo</code> is normally more specific, any <code>!important</code> rule overrides
+            non-important ones.
+          </p>
+
+          <p><strong>3 What color would the text be if the element did not have the class
+              <code>izjava</code>?</strong><br>
+            <em>Answer:</em> <strong>Blue</strong>.
+          </p>
+        </section>
+
+        <section class="answers">
+          <h3>More answers</h3>
+
+          <p><strong>1. Which formats are supported in all modern browsers?</strong><br>
+            <em>Answer:</em> All modern browsers support <strong>JPEG, PNG, GIF, SVG, and WebP</strong>.
+          </p>
+
+          <p><strong>2. Why would you use SVG instead of JPEG for a logo?</strong><br>
+            <em>Answer:</em> SVG is a <strong>vector format</strong>, which means it can scale to any size without
+            losing quality.
+            <br>It also has smaller file sizes for simple graphics and looks sharp on all screens.
+            <br>JPEG is a raster format and loses quality when resized, so it is not ideal for logos.
+          </p>
+
+          <p><strong>3. What advantage does the WEBP format have compared to PNG and JPEG?</strong><br>
+            <em>Answer:</em> WEBP provides <strong>better compression</strong>, meaning files are smaller while still
+            maintaining high quality.
+            <br>It supports lossy and losseless compression, transparency, and animation. So it can replace both PNG and
+            JPEG while using less space.
+          </p>
+
+          <p><strong>4. Does GIF support transparency and animation? What about PNG? How do they differ?</strong><br>
+            <em>Answer:</em>
+            <strong>GIF</strong> Supports both <strong>animation</strong> and <strong>1-bit transparency</strong> but
+            it is <strong>limited to 256 colors</strong>. <br>
+            <strong>PNG</strong> Does not support animation but supports <strong>full alpha transparency</strong> and
+            <strong>better color quality</strong>. <br>
+            The main difference is that GIF supports animation, PNG supports high-quality transparency.
+          </p>
+
+          <p><strong>5. Which formats allow lossless compression?</strong><br>
+            <em>Answer:</em> The following formats support <strong>lossless compression</strong>:<br>
+            PNG, GIF, SVG (vector, inherently lossless), and WebP (in lossless mode).<br>
+          </p>
+        </section>
+      </div>
+    </section>
+
+    </section>
+
+  </main>
 </body>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Animal Adgency. All rights reserved.</p>
+  </div>
+</footer>
 
 </html>
