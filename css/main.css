@@ -371,7 +371,7 @@ a:hover {
 }
 
 .logo:hover svg {
-  transform: rotate(15deg); 
+  transform: rotate(15deg);
 }
 
 .logo:hover #happy {
@@ -381,6 +381,7 @@ a:hover {
 .logo:hover #angry {
   opacity: 1;
 }
+
 .logo span {
   line-height: 1.1;
 }
@@ -445,7 +446,7 @@ a:hover {
   align-items: center;
   padding: 0 2.5rem 0 1.5rem;
   border-radius: 2rem 0 0 2rem;
- 
+
   margin-right: -3.5rem;
   opacity: 0;
   transform: translateX(20px);
@@ -459,6 +460,19 @@ a:hover {
   transform: translateX(0);
   margin-right: -1.5rem;
 }
+
+/* =======================
+   NAVIGATION BUTTON
+======================= */
+
+.hamburger {
+  order: 1;
+  display: inline-block;
+}
+
+.logo {
+    order: 2;
+  }
 
 
 /* =======================
@@ -506,7 +520,7 @@ a:hover {
     flex-basis: calc((100% - 2rem) / 3);
     aspect-ratio: 1 / 1;
   }
-  
+
   .site-header .container {
     display: flex;
     justify-content: space-between;
@@ -550,5 +564,82 @@ a:hover {
 
   #hero-section p {
     font-size: 3rem;
+  }
+}
+
+/* =======================
+   NAVEGACIÓN RESPONSIVA (EJERCICIO 39)
+======================= */
+
+/* A. Estilos para pantallas pequeñas (Móviles y Tablets hasta 1023px) */
+@media (max-width: 1023px) {
+  .site-header .container {
+    display: flex;
+    flex-wrap: wrap;             /* Permite que el nav salte a la siguiente línea */
+    justify-content: space-between; /* Hamburguesa a un lado, logo al otro */
+    align-items: center;
+  }
+
+  /* El botón hamburguesa se queda arriba */
+  .hamburger {
+    order: 1;
+    display: inline-block;
+  }
+
+  /* El logo se queda arriba a la derecha */
+  .logo {
+    order: 2;
+  }
+
+  /* El menú (nav) ocupa todo el ancho en la fila de abajo */
+  nav {
+    flex-basis: 100%;            /* Fuerza el ancho completo */
+    order: 3;                    /* Se posiciona debajo del logo y botón */
+    margin-top: 1.5rem;
+  }
+
+  .nav-list {
+    flex-direction: column;      /* Lista en vertical */
+    gap: 0;
+    background-color: var(--beige200);
+    border-radius: 8px;
+    padding: 1rem 0;
+  }
+
+  .nav-list li {
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .nav-list li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-list a {
+    display: block;
+    padding: 1rem;
+    color: var(--viola600);
+    text-decoration: none;
+  }
+}
+
+/* B. Estilos para pantallas grandes (Escritorio desde 1024px) */
+@media (min-width: 1024px) {
+  /* Ocultamos el botón hamburguesa en escritorio */
+  .hamburger {
+    display: none;
+  }
+
+  /* Aseguramos que el contenedor del header vuelva a su diseño original */
+  .site-header .container {
+    flex-wrap: nowrap;
+  }
+
+  nav {
+    flex-basis: auto;
+  }
+
+  .nav-list {
+    flex-direction: row; /* Lista en horizontal */
   }
 }
