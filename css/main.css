@@ -372,6 +372,53 @@ a:hover {
   color: var(--viola300);
 }
 
+
+/* =======================
+   CHAT BUTTON
+======================= */
+
+.chat-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+
+  position: fixed;
+  display: inline-block;
+
+  padding: 0.8rem 1.4rem;
+  padding-right: 3.5rem; 
+
+  background-color: var(--beige300);
+  color: var(--viola600);
+
+  font-size: var(--fs-md);
+  font-weight: 700;
+  text-decoration: none;
+
+  border-radius: 1em;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+
+  z-index: 1000;
+}
+
+.chat-btn::after {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  right: -2.2rem;
+  transform: translateY(-50%);
+
+  width: 4em;
+  height: 4em;
+
+  background-image: url("../img/icon-chat.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
 /* =======================
    FOOTER
 ======================= */
