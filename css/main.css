@@ -478,7 +478,7 @@ a:hover {
 
 @media (min-width: 1025px) {
   #hero-section {
-    background-image: url('../img/hero-image.png');
+    background-image: url('../img/hero-image-large.png');
   }
 
   #hero-section h1 {
