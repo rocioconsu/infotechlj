@@ -458,6 +458,21 @@ a:hover {
     flex-basis: calc((100% - 2rem) / 3);
     aspect-ratio: 1 / 1;
   }
+  
+  .site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-list {
+    gap: 0;
+  }
+
+  .nav-list a {
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+  }
 }
 
 @media (min-width: 595px) {
