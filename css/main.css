@@ -462,21 +462,6 @@ a:hover {
    NAVIGATION BUTTON
 ======================= */
 
-.hamburger {
-  order: 1;
-  display: none;
-}
-
-.logo {
-  order: 2;
-}
-
-.site-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .nav-list {
   display: flex;
   gap: 1.5rem;
@@ -533,10 +518,15 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
   }
 
   .nav-list {
-    gap: 0;
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   .nav-list a {
@@ -602,12 +592,12 @@ a:hover {
   }
 
   .hamburger {
-    order: 1;
+    order: 2;
     display: inline-block;
   }
 
   .logo {
-    order: 2;
+    order: 1;
     font-size: 1.2rem;
   }
 
@@ -666,7 +656,6 @@ a:hover {
   }
 
   nav {
-    flex-basis: auto;
     display: block !important;
   }
 
