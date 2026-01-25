@@ -327,7 +327,8 @@ a:hover {
 ======================= */
 .site-header {
   background-color: var(--beige200);
-  padding: 1rem 0;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
 }
 
 .site-header .container {
@@ -469,9 +470,141 @@ a:hover {
 }
 
 /* =======================
-   FOOTER
+   SERVICES PAGE
 ======================= */
 
+.services-intro {
+  margin-bottom: 4rem;
+}
+
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  /* Móvil: 1 columna */
+  padding-bottom: 4rem;
+}
+
+.service-card {
+  background-color: var(--viola500);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: left;
+  /* Alineación a la izquierda para mejor lectura de servicios */
+  transition: transform 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--beige300);
+}
+
+.service-card h3 {
+  margin-top: 0;
+  color: var(--beige300);
+}
+
+.price {
+  display: block;
+  font-weight: bold;
+  color: var(--beige400);
+  margin-bottom: 1rem;
+  font-size: var(--fs-md);
+}
+
+/* Layout para Tablets y Desktop */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas */
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas en pantallas grandes */
+  }
+}
+
+/* =======================
+   ABOUT US PAGE
+======================= */
+
+.about-intro {
+    margin-bottom: 3rem;
+}
+
+.team-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    padding-bottom: 5rem;
+}
+
+.team-card {
+    background-color: var(--viola500);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: background-color 0.4s ease;
+}
+
+.team-card:hover {
+    background-color: var(--viola400);
+}
+
+.team-image-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    background-color: var(--viola700);
+}
+
+.team-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-image-container img {
+    transform: scale(1.15);
+}
+
+.team-card h3 {
+    margin: 0.5rem 0;
+    color: var(--beige300);
+}
+
+.role {
+    font-weight: bold;
+    color: var(--beige400);
+    text-transform: uppercase;
+    font-size: var(--fs-sm);
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* =======================
+   FOOTER
+======================= */
+ 
 .site-footer {
   background-color: var(--viola700);
   padding: 2rem 0;
@@ -547,7 +680,7 @@ a:hover {
   }
 
   .site-header {
-    padding-bottom: 10vh;
+    padding-bottom: 3vh;
   }
 }
 
@@ -588,7 +721,7 @@ a:hover {
   }
 
   body.menu-open {
-    transform: translateX(-70vw); 
+    transform: translateX(-70vw);
   }
 
   .hamburger {
@@ -606,15 +739,18 @@ a:hover {
   }
 
   nav {
-    position: fixed; /* Se queda fijo en la pantalla */
+    position: fixed;
+    /* Se queda fijo en la pantalla */
     top: 0;
     right: 0;
-    width: 70vw; /* 70% del ancho de la ventana */
-    height: 100vh; /* Llena toda la altura */
+    width: 70vw;
+    /* 70% del ancho de la ventana */
+    height: 100vh;
+    /* Llena toda la altura */
     background-color: var(--beige200);
     z-index: 1000;
     transform: translateX(70vw);
-    display: block !important; 
+    display: block !important;
     overflow-y: auto;
   }
 
@@ -624,7 +760,8 @@ a:hover {
 
   .nav-list {
     flex-direction: column;
-    padding-top: 5rem; /* Espacio para que no choque con el botón */
+    padding-top: 5rem;
+    /* Espacio para que no choque con el botón */
   }
 
   .nav-list li {
