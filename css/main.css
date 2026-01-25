@@ -533,78 +533,187 @@ a:hover {
 ======================= */
 
 .about-intro {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .team-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr;
-    padding-bottom: 5rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  padding-bottom: 5rem;
 }
 
 .team-card {
-    background-color: var(--viola500);
-    padding: 1.5rem;
-    border-radius: 12px;
-    text-align: center;
-    transition: background-color 0.4s ease;
+  background-color: var(--viola500);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: background-color 0.4s ease;
 }
 
 .team-card:hover {
-    background-color: var(--viola400);
+  background-color: var(--viola400);
 }
 
 .team-image-container {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    background-color: var(--viola700);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  background-color: var(--viola700);
 }
 
 .team-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-fit: contain;
+  transition: transform 0.5s ease;
 }
 
 .team-card:hover .team-image-container img {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 .team-card h3 {
-    margin: 0.5rem 0;
-    color: var(--beige300);
+  margin: 0.5rem 0;
+  color: var(--beige300);
 }
 
 .role {
-    font-weight: bold;
-    color: var(--beige400);
-    text-transform: uppercase;
-    font-size: var(--fs-sm);
-    margin-bottom: 1rem;
+  font-weight: bold;
+  color: var(--beige400);
+  text-transform: uppercase;
+  font-size: var(--fs-sm);
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 600px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
-    .team-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
+/* =======================
+   CONTACT PAGE
+======================= */
+
+.contact-layout {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .contact-layout {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* Estilos de los inputs */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label,
+.form-group p {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--beige300);
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--viola300);
+  background-color: var(--viola700);
+  color: white;
+  font-family: var(--primary-font);
+}
+
+/* --- CUSTOM RADIO & CHECKBOX --- */
+.custom-radio,
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+/* Ocultamos el input real */
+.custom-radio input,
+.custom-checkbox input {
+  display: none;
+}
+
+/* Creamos el área del check/radio */
+.custom-radio span::before,
+.custom-checkbox span::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--beige300);
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: all 0.3s;
+}
+
+.custom-radio span::before {
+  border-radius: 50%;
+}
+
+/* Círculo para radio */
+.custom-checkbox span::before {
+  border-radius: 4px;
+}
+
+/* Cuadrado para check */
+
+/* Estado seleccionado */
+.custom-radio input:checked+span::before,
+.custom-checkbox input:checked+span::before {
+  background-color: var(--beige300);
+  box-shadow: inset 0 0 0 3px var(--viola700);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-links i {
+    font-size: 1.5rem;
+    color: var(--beige300);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover i {
+    transform: translateY(-5px) scale(1.2);
+    color: var(--white);
+}s
 
 /* =======================
    FOOTER
 ======================= */
- 
+
 .site-footer {
   background-color: var(--viola700);
   padding: 2rem 0;
