@@ -26,3 +26,20 @@ document.addEventListener("click", (event) => {
         }
     }
 });
+
+const modal = document.getElementById('chatModal');
+const openBtn = document.getElementById('openChat');
+const closeBtn = document.getElementById('closeChat');
+
+// Abrir
+openBtn.onclick = () => modal.classList.add('active');
+
+// Cerrar con botón
+closeBtn.onclick = () => modal.classList.remove('active');
+
+// Cerrar al hacer click fuera (overlay)
+window.onclick = (event) => {
+    if (event.target == modal) {
+        modal.classList.remove('active');
+    }
+}

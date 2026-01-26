@@ -208,9 +208,43 @@
                 <p>Returns occasionally with tales of Sugarcandy Mountain — now branded as a premium NFT retreat.
                     Clients love him.</p>
             </article>
+
+            <article class="team-card">
+                <div class="team-image-container">
+                    <img src="img/member-sheep.png" alt="The Sheep">
+                </div>
+                <h3>The Sheep</h3>
+                <p class="role">Social Media Echo Team</p>
+                <p>Retweet. React. Repeat. Always on brand, always online. They never question — they go viral.</p>
+            </article>
+
+            <article class="team-card">
+                <div class="team-image-container">
+                    <img src="img/member-dog.png" alt="The Dog">
+                </div>
+                <h3>The Dog</h3>
+                <p class="role">Security Enforcer</p>
+                <p>Loyal guardians of agency order and control. The dogs never speak, but always know who crossed the
+                    line.</p>
+            </article>
         </section>
 
-        <a href="#" class="chat-btn"><span>Chat with us</span></a>
+        <button id="openChat" class="chat-btn">
+            <span>Chat with us</span>
+        </button>
+
+        <div id="chatModal" class="modal-overlay">
+            <div class="modal-content">
+                <button id="closeChat" class="close-btn">&times;</button>
+                <h3>Chat with the Herd</h3>
+                <form class="modal-form">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <textarea placeholder="Your Message" rows="4"></textarea>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+            </div>
+        </div>
 
     </main>
 
@@ -218,6 +252,11 @@
 
 <footer class="site-footer">
     <div class="container">
+        <div class="social-links">
+            <a href="#"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#"><i class="ph ph-twitter-logo"></i></a>
+            <a href="#"><i class="ph ph-facebook-logo"></i></a>
+        </div>
         <p>© 2025 Animal Adgency. All rights reserved.</p>
     </div>
 </footer>
